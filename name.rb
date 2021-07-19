@@ -6,7 +6,7 @@ class Person
 end
 
 david = Person.new
-david.name = "David"
+david.name = "David Brasil"
 puts "david is named #{david.name} ."
 
 puts "david is named" + david + "."
