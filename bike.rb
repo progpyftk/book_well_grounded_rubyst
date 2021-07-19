@@ -1,7 +1,7 @@
 class Bicycle
 	attr_reader :gears, :wheels, :seat
 	def initialize(gears = 1)
-		@wheels = 2
+		@wheels = 5
 		@seats = 1
 		@gears = gears
 	end
