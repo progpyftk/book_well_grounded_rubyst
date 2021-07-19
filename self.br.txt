@@ -1,0 +1,30 @@
+puts "self at top level"
+puts self
+
+class C
+	puts "beggining of class C, the self is:"
+	puts self
+	def x
+		puts "instance method, self is:"
+		puts self
+	end
+	def C.x
+		puts "class_method, self is:"
+		puts self
+	end
+	module M
+		puts "nested module C::M:, the self is:"
+		puts self
+	end
+	puts "Back to class C"
+	puts self
+end
+
+puts C.x
+
+puts C.new.x
+
+class D < C
+end
+
+puts D.x

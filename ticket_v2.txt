@@ -1,0 +1,42 @@
+class Ticket
+	def initialize (venue)
+		@venue = venue
+	end
+	
+	def price=(price)
+		@price = price
+	end
+
+	def date=(date)
+		year, month, day = date.split('-')
+		if  (year.length != 4) || (month.length != 2) || (day.length != 2) 
+			puts "Please provide the date formatted as YYYY-MM-DD"
+		else
+			@date = date
+			puts "Date input was ok"
+			@date
+		end	
+	end
+		
+	def venue
+		@venue
+	end
+	
+	def price
+		@price
+	end
+	
+	def date
+		@date
+	end
+
+	def discount(percent)
+		@price = @price * (100 - percent) / 100
+		@price
+	end
+end
+
+t1 = Ticket.new("Show da Anitta")
+
+t1.date = "198-02-22"
+
